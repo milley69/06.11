@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+*, *::after, *::before, p, a {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+a, p, span, h1, h2, h3, h4, h5, input {
+  font-family: "Roboto", sans-serif;
+  color: #fff; }
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+body {
+  background: #e56b6f;
+  width: 100%;
+  height: 100vh; }
+
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-thumb {
+  display: none; }
+
+#del {
+  position: fixed;
+  background: #03071e;
+  background: #355070;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+button {
+  background: none; }
+  button i {
+    font-size: 25em;
+    color: #6d597a;
+    transition: all 0.6s ease;
+    animation-name: hearth; }
+    button i:hover {
+      color: #b56576; }
+    button i:active {
+      color: #e56b6f; }
+
+.he_all i {
+  color: #e56b6f;
+  font-size: 200em; }
+  .he_all i:hover {
+    color: #e56b6f; }
+
+#maps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  transition: all 1s ease;
+  opacity: 0; }
+  #maps p {
+    position: relative;
+    background-color: #615971;
+    border-radius: 30px; }
+    #maps p:nth-child(1)::before {
+      position: absolute;
+      content: url("../img/map-pin-solid.svg");
+      left: 235px;
+      top: 170px;
+      height: 53px;
+      width: 33px; }
+    #maps p:nth-child(2)::before {
+      position: absolute;
+      content: url("../img/map-pin-solid.svg");
+      left: 217px;
+      top: 226px;
+      height: 53px;
+      width: 33px; }
+
+[data-maps] {
+  position: relative; }
+  [data-maps]::after {
+    content: attr(data-maps);
+    position: absolute;
+    left: 10em;
+    top: -1em;
+    background: #e56b6f;
+    color: #000;
+    padding: 0.5em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: 1s; }
+  [data-maps]:hover::after {
+    opacity: 1;
+    top: 15em; }
+
+[data-maps]:nth-child(2):hover::after {
+  opacity: 1;
+  top: 18.2em;
+  left: 8.5em; }
+[data-maps]:nth-child(2) img {
+  background: #615971;
+  border-radius: 30px; }
+
+#faces {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  transition: all 1s ease;
+  row-gap: 80px;
+  opacity: 0; }
+
+#rub180, #bestiary, #radiation,
+#marry, #hors, #snow, #ji, #bird,
+#bird2, #poop, #poop2, #shit, #shit2,
+#salam {
+  height: 512px;
+  width: 512px;
+  position: relative;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; }
+  #rub180 img, #bestiary img, #radiation img,
+  #marry img, #hors img, #snow img, #ji img, #bird img,
+  #bird2 img, #poop img, #poop2 img, #shit img, #shit2 img,
+  #salam img {
+    position: absolute;
+    height: 512px;
+    width: 512px;
+    border-radius: 30px; }
+
+.lock {
+  background-color: #615971; }
+  .lock::after {
+    position: absolute;
+    content: url("../img/lock.svg");
+    top: 175px;
+    left: 186px;
+    width: 141px;
+    height: 161px; }
+
+.lock img {
+  display: none; }
+
+#rub180Q, #bestiaryQ,
+#radiationQ, #snowQ, #marryQ,
+#jiQ, #poopQ, #horsQ,
+#birdQ, #shitQ, #salamQ {
+  background: #e56b6f;
+  border-bottom: 2px solid #615971;
+  outline: none;
+  text-align: center;
+  font-size: 15px; }
+
+[data-tooltip] {
+  position: relative; }
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 300px;
+    left: -4em;
+    top: 0;
+    background: #615971;
+    color: #fff;
+    padding: 0.5em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: 1s; }
+  [data-tooltip]:hover::after {
+    opacity: 1;
+    top: 2em; }
+
+footer {
+  height: fit-content;
+  background: #e56b6f;
+  margin-top: 80px;
+  padding-bottom: 10px; }
+  footer h1 {
+    text-align: center;
+    font-size: 1em;
+    margin: 1.3em 20em;
+    cursor: help;
+    letter-spacing: 0.2px; }
+    footer h1 a {
+      text-decoration: none;
+      cursor: default; }
+    footer h1 i {
+      margin: 0 0.1em; }
+
+[data-name] {
+  position: relative; }
+  [data-name]::after {
+    content: attr(data-name);
+    position: absolute;
+    width: 215px;
+    right: -19em;
+    top: -1.4em;
+    color: #fff;
+    padding: 0.5em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: 1s; }
+  [data-name]:hover::after {
+    opacity: 1;
+    top: -0.4em; }
+
+.liked {
+  position: absolute;
+  top: 0.5em;
+  left: 1em;
+  padding: 0.3em;
+  z-index: 2;
+  border: 1px solid #e56b6f;
+  border-radius: 4px; }
+
+#rub180 {
+  transition: all 1s ease; }
+
+span.qLike {
+  top: 0;
+  z-index: 2;
+  font-size: 11em;
+  position: absolute;
+  color: #e56b6f;
+  transition: all 0.6s ease;
+  opacity: 0;
+  animation: scale-up-center 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1; }
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  50% {
+    transform: scale(1);
+    opacity: 0.8; }
+  100% {
+    transform: scale(0);
+    opacity: 0; } }
+
+/*# sourceMappingURL=main.css.map */
